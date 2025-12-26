@@ -11,4 +11,8 @@ contract Task_03 {
    function addPerson(string memory _name, uint8 _age) external {
        people.push(Person(_name, _age)); // Добавление новой структуры в массив
    }
+
+   function getUser(uint8 _index) public view returns (Person memory)  {
+        return people[_index];
+   }
 }
